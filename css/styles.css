@@ -1,0 +1,32 @@
+.own-dropdown #exampleFormControlSelect1{
+		display: inline-block;
+    width: auto;
+	}
+	.head-title{
+		font-size: 16px;
+		background-color: #3c4059;
+		padding: 10px 16px;
+		margin-top: 20px;
+		margin-bottom: 16px;
+	}
+	.staus-table-data table{
+		width: 650px;
+		margin-top: 20px
+	}
+	.history-table-data table{
+		margin-top: 20px;
+	}
+	.pad-none{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.m-t{
+		margin-top: 20px;
+	}
+	.history-table-data table tr td:last-child{
+		text-align: center;
+	}
+	.alerts-main {
+		border: 1px solid #3a4264;
+		background-color: #2a314a;
+	}

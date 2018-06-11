@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>USTREF || System Overview</title>
+  <!-- Bootstrap core CSS-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+  
+
+</head>
+
+<body class="fixed-nav bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-nav fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html"><img src="images/st-thomas.png" alt="logo"/></a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="system-overview.html">
+            <i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">System Overview</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="index.html">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Details View</span>
+          </a>
+        </li>
+		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="alerts-and-notifications.html">
+            <i class="fa fa-fw fa-bell"></i>
+            <span class="nav-link-text">Alerts & Notifications</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+	  <div><h4 class="text-st-thomas-head">The University of st.Thomas Renewal Energy Facility Microgrid</h4></div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content-wrapper">
+    <div class="container-fluid st-thomas-system-overview">
+    
+		<!-- st-graphinfo-->
+		<div class="row st-graphinfo">
+			<div class="col-xl-6 col-sm-6 mb-3">
+				<div class="card mb-3">
+					<div class="card-header">
+					  <i class="fa fa-area-chart"></i> Daily Snapshot</div>
+					<div class="card-body ">
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-sm-6 mb-3">
+				<div class="card mb-3">
+					<div class="card-header">
+					  <i class="fa fa-pie-chart"></i> Energy Generation</div>
+					<div class="card-body">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!---end st-graphinfo---->
+		
+		<!---Start st-thomas-os---->
+		<div class="row st-thomas-so">
+			<div class="col-xl-6 col-lg-6 col-sm-6 mb-3">
+			
+				  <!-- Example Bar Chart Card-->
+				<div class="card mb-3 st-status">
+					<div class="card-header">
+					  <i class="fa fa-bar-chart"></i> Status</div>
+					<div class="card-body">
+					  <div class="row">
+						<div class="col-xl-1 col-lg-6 col-sm-6 mb-3 st-response"></div>
+						
+						<div class="col-xl-3 col-lg-6 col-sm-6 mb-3">
+							<p><b>Phase Voltages</b></p>
+							<p><span>- V<sub>A</sub></span> <span>:</span> <span>415V</span></p>
+							<p><span>- V<sub>B</sub></span> <span>:</span> <span>415V</span></p>
+							<p><span>- V<sub>C</sub></span> <span>:</span> <span>415V</span></p>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-sm-6 mb-3">
+							<p><b>Phase Currents</b></p>
+							<p><span>- I<sub>A</sub></span> <span>:</span> <span>41A</span></p>
+							<p><span>- I<sub>B</sub></span> <span>:</span> <span>41A</span></p>
+							<p><span>- I<sub>C</sub></span> <span>:</span> <span>41A</span></p>
+						</div>
+						<div class="col-xl-5 col-lg-6 col-sm-6 mb-3"></div>
+						
+						<div class="col-xl-1 col-lg-6 col-sm-6 mb-3"></div>
+					
+						<div class="col-xl-12 col-lg-12 col-sm-12 mb-3">
+							<div class="overview-table-data">
+								<table class="table table-condensed">
+									<tr>
+										<td>Power Factor :</td>
+										<td>0.8</td>
+									</tr>
+									<tr>
+										<td>Frequency  :</td>
+										<td>50Hz</td>
+									</tr>
+									<tr>
+										<td>Real Power Export :</td>
+										<td>5KW</td>
+									</tr>
+									<tr>
+										<td>Real Power Import :</td>
+										<td>5kW</td>
+									</tr>
+									<tr>
+										<td>Reactive Power Export :</td>
+										<td>5kVAR</td>
+									</tr>
+									<tr>
+										<td>Reactive Power Import :</td>
+										<td>5kVAR</td>
+									</tr>
+									
+								</table>
+
+							</div>
+						</div>
+							
+					</div>
+				</div>
+			</div>
+				
+			</div>
+			<div class="col-xl-6 col-lg-6 col-sm-6 mb-3">
+			
+				  <!-- Example Bar Chart Card-->
+				  <div class="card mb-3 st-weather">
+					<div class="card-header">
+					  <i class="fa fa-bar-chart"></i> Weather</div>
+					<div class="card-body">
+						<div class="overview-table-data">
+							<table class="table table-condensed">
+								<tr>
+									<th>Temperature  :</th>
+									<td>70<sup>o</sup> F</td>
+								</tr>
+								<tr>
+									<th>Humidity  :</th>
+									<td>50mph</td>
+								</tr>
+								<tr>
+									<th>Wind Speed :</th>
+									<td>NW</td>
+								</tr>
+								<tr>
+									<th>Wind Direction :</th>
+									<td>500W/m<sup>2</sup></td>
+								</tr>
+							</table>
+
+						</div>
+					</div>
+				  </div>
+				  
+				  <!-- Example Bar Chart Card-->
+				  <div class="card mb-3 st-optimization">
+					<div class="card-header">
+					  <i class="fa fa-bar-chart"></i> Optimization</div>
+					<div class="card-body">
+						<div class="overview-table-data">
+							<table class="table table-condensed">
+								<tr>
+									<th>Last Run Date  :</th>
+									<td>2018-05-31</td>
+								</tr>
+								<tr>
+									<th>Last Run Time  :</th>
+									<td>19:32:25 + 05:30</td>
+								</tr>
+								<tr>
+									<th>Economic Optimization percentage :</th>
+									<td>50%</td>
+								</tr>
+								<tr>
+									<th>Emission Optimization Percentage :</th>
+									<td>50%</td>
+								</tr>
+								<tr>
+									<th>Optimization Status :</th>
+									<td>Optimal</td>
+								</tr>
+							</table>
+
+						</div>
+					</div>
+				  </div>
+				
+			</div>
+		</div><!---end st-thomas-os---->
+      
+    </div><!---end st-thomas-system-overview---->
+    
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+	<!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-ustref" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+  </div>
+</body>
+
+</html>

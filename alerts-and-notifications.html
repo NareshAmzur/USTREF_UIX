@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>USTREF || Alerts & Notifications</title>
+  <!-- Bootstrap core CSS-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="js/raphael-2.1.4.min.js"></script>
+  <script src="js/justgage.js"></script>
+
+</head>
+
+<body class="fixed-nav bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-nav fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html"><img src="images/st-thomas.png" alt="logo"/></a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="system-overview.html">
+            <i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">System Overview</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="index.html">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Details View</span>
+          </a>
+        </li>
+		<li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="alerts-and-notifications.html">
+            <i class="fa fa-fw fa-bell"></i>
+            <span class="nav-link-text">Alerts & Notifications</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+	  <div><h4 class="text-st-thomas-head">The University of st.Thomas Renewal Energy Facility Microgrid</h4></div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content-wrapper">
+  <!--start container div-->	
+	<div class="container-fluid st-thomas-alerts">
+		<div class="alerts-main">
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+					<li class="nav-item">
+					  <a class="nav-link" id="status-tab" data-toggle="tab" href="#status" role="tab" aria-controls="status" aria-selected="false">Alert Status</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" id="history-tab" data-toggle="tab" href="#history" role="tab" aria-controls="history" aria-selected="false">Alert History</a>
+					</li>
+					<li class="nav-item ">
+					  <a class="nav-link active" id="preferences-tab" data-toggle="tab" href="#preferences" role="tab" aria-controls="preferences" aria-selected="true">Preferences</a>
+					</li>
+				</ul>
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="preferences" role="tabpanel" aria-labelledby="preferences-tab">
+					<h4 class="head-title">Notification Type</h4>
+					<div class="col-md-12 mb-5">
+						<div class="checkbox checkbox-success checkbox-email">
+							<input id="checkbox1" type="checkbox">
+							<label for="checkbox1">
+								Email
+							</label>
+						</div>
+						<div class="checkbox-align">
+							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="col-md-12">
+							<div class="checkbox checkbox-success checkbox-email">
+								<input id="checkbox1" type="checkbox">
+								<label for="checkbox1">
+									SMS
+								</label>
+							</div>
+							<div class="checkbox-align">
+								<input type="text" class="form-control sms-input" id="exampleInputSms" aria-describedby="emailHelp" placeholder="Enter SMS">
+							</div>
+					</div>
+					<div class="clearfix"></div>
+					<h4 class="head-title">Safety Alerts</h4>
+						
+					<div class="col-md-12">
+						<div class="form-check own-dropdown">
+							<div class="row">
+								<div class="form-group checkbox checkbox-success mt-2">
+									<input id="checkbox3" type="checkbox">
+									<label for="checkbox3">
+										Voltage is outside the expected range
+									</label>
+								</div>
+								<div class="input-group mb-3 col-lg-2">
+									<input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="basic-addon1">V</span>
+									</div>
+								</div>
+								<span class="mt-2">TO</span>
+								<div class="input-group mb-3 col-lg-2">
+									<input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="basic-addon1">V</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h4 class="head-title">Equipment Performance Alerts</h4>
+					<div class="col-md-12">
+						<div class="form-group checkbox checkbox-success mt-2">
+							<input id="checkbox4" type="checkbox">
+							<label for="checkbox4">
+								Load Control Alerts
+							</label>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group checkbox checkbox-success checkbox-exceed mt-2">
+							<input id="checkbox5" type="checkbox">
+							<label for="checkbox5">
+								Data outage Alerts if it exceed
+							</label>
+						</div>
+						<div class="input-group mb-3 checkbox-align">
+							<input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon1">Hours</span>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="col-md-12">
+						<div class="form-group checkbox checkbox-success checkbox-exceed mt-2">
+							<input id="checkbox5" type="checkbox">
+							<label for="checkbox5">
+								Data outage Alerts if it exceed
+							</label>
+						</div>
+						<div class="input-group mb-3 checkbox-align">
+							<input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon1">%</span>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					
+					<div class="col-md-12">
+						<div class="form-group checkbox checkbox-success mt-2">
+							<input id="checkbox7" type="checkbox">
+							<label for="checkbox7">
+								Unexpected loss of solar production
+							</label>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group checkbox checkbox-success checkbox-exceed mt-2">
+							<input id="checkbox5" type="checkbox">
+							<label for="checkbox5">
+								Data outage Alerts if it exceed
+							</label>
+						</div>
+						<div class="input-group mb-3 checkbox-align">
+							<input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon1">Hours</span>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					
+					
+					<div class="col-md-12">
+						<div class="form-group checkbox checkbox-success mt-2">
+							<input id="checkbox9" type="checkbox">
+							<label for="checkbox9">
+								Sudden Battery outage
+							</label>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group checkbox checkbox-success mt-2">
+							<input id="checkbox10" type="checkbox">
+							<label for="checkbox10">
+								Sudden Grid outage
+							</label>
+						</div>
+					</div>
+				</div><!--end preferences tab-->
+				<div class="tab-pane fade" id="status" role="tabpanel" aria-labelledby="status-tab">
+						
+					<div class="staus-table-data">
+						<table class="table table-bordered">
+							<tr>
+								<th>ID</th>
+								<th>Description</th>
+								<th>Status</th>
+							</tr>
+							<tr>
+									<td>#9384759</td>
+									<td>Lorem ipsum dolor sit amet</td>
+									<td class="text-success">Resolved</td>
+							</tr>
+							<tr>
+									<td>#9384759</td>
+									<td>Lorem ipsum dolor sit amet</td>
+									<td class="text-danger">Pending</td>
+							</tr>
+							<tr>
+									<td>#9384759</td>
+									<td>Lorem ipsum dolor sit amet</td>
+									<td class="text-secondary">New</td>
+							</tr>
+							<tr>
+									<td>#9384759</td>
+									<td>Lorem ipsum dolor sit amet</td>
+									<td class="text-success">Resolved</td>
+							</tr>
+							<tr>
+									<td>#9384759</td>
+									<td>Lorem ipsum dolor sit amet</td>
+									<td class="text-danger">Pending</td>
+							</tr>
+							<tr>
+									<td>#9384759</td>
+									<td>Lorem ipsum dolor sit amet</td>
+									<td class="text-danger">Pending</td>
+							</tr>
+							<tr>
+									<td>#9384759</td>
+									<td>Lorem ipsum dolor sit amet</td>
+									<td class="text-success">Resolved</td>
+							</tr>
+							<tr>
+									<td>#9384759</td>
+									<td>Lorem ipsum dolor sit amet</td>
+									<td class="text-success">Resolved</td>
+							</tr>
+						</table>
+
+					</div>
+				</div><!--end status tab-->
+				<div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab">
+					<div class="col-md-12 pad-none m-t">
+						<div class="row">
+							<div class="col-md-6">
+								<form>
+									<div class="form-row">
+										<div class="col-4">
+											<select class="form-control" id="exampleFormControlSelect1">
+												<option>Safety Type</option>
+												<option>Budget Alerts</option>
+												<option>Equipment Performance Alerts</option>
+											</select>
+										</div>
+										<div class="col-6">
+											<select class="form-control" id="exampleFormControlSelect1">
+												<option>Voltage is outside the expected range</option>
+											</select>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="col-md-12 pad-none m-t">
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text" id="basic-addon1"><i class="fa fa-search" ></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="Search" aria-label="" aria-describedby="basic-addon1">
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="history-table-data">
+						<table id="history-table" class="table table-striped table-bordered" style="width:100%">
+							<thead>
+								<tr>
+									<th>Sl.No <i class="fa fa-sort-amount-asc" aria-hidden="true"></i></th>	
+									<th>Alert <i class="fa fa-sort-amount-asc" aria-hidden="true"></i></th>
+									<th>Equipment <i class="fa fa-sort-amount-asc" aria-hidden="true"></i></th>
+									<th>Email/Phone <i class="fa fa-sort-amount-asc" aria-hidden="true"></i></th>
+									<th> <i class="fa fa-sort-amount-asc" aria-hidden="true"></i></th>
+									<th>Date/Time <i class="fa fa-sort-amount-asc" aria-hidden="true"></i></th>
+									<th>Action <i class="fa fa-sort-amount-asc" aria-hidden="true"></i></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Energy Monitor Offline</td>
+									<td></td>
+									<td>Stocky@mailinator.com</td>
+									<td>Green Village</td>
+									<td>2011/04/25 &nbsp; 12:45PM</td>
+									<td><i class="fa  fa-file-text-o"></i></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Energy Monitor </td>
+									<td></td>
+									<td>Stoc@mailinator.com</td>
+									<td>Green Village</td>
+									<td>2011/04/25 &nbsp; 12:45PM</td>
+									<td><i class="fa  fa-file-text-o"></i></td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Energy Monitor </td>
+									<td></td>
+									<td>Stoc@mailinator.com</td>
+									<td>Green Village</td>
+									<td>2011/04/25 &nbsp; 12:45PM</td>
+									<td><i class="fa  fa-file-text-o"></i></td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>Energy Monitor </td>
+									<td></td>
+									<td>Stoc@mailinator.com</td>
+									<td>Green Village</td>
+									<td>2011/04/25 &nbsp; 12:45PM</td>
+									<td><i class="fa  fa-file-text-o"></i></td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>Energy Monitor </td>
+									<td></td>
+									<td>Stoc@mailinator.com</td>
+									<td>Green Village</td>
+									<td>2011/04/25 &nbsp; 12:45PM</td>
+									<td><i class="fa  fa-file-text-o"></i></td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>Energy Monitor </td>
+									<td></td>
+									<td>Stoc@mailinator.com</td>
+									<td>blue Village</td>
+									<td>2011/04/25 &nbsp; 12:45PM</td>
+									<td><i class="fa  fa-file-text-o"></i></td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td>Energy Monitor </td>
+									<td></td>
+									<td>Stc@mailinator.com</td>
+									<td>red Village</td>
+									<td>2011/04/25 &nbsp; 12:45PM</td>
+									<td><i class="fa  fa-file-text-o"></i></td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td>Energy Monitor </td>
+									<td></td>
+									<td>Soc@mailinator.com</td>
+									<td>yellow Village</td>
+									<td>2011/04/25 &nbsp; 12:45PM</td>
+									<td><i class="fa  fa-file-text-o"></i></td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td>Energy Monitor </td>
+									<td></td>
+									<td>Stoc@mail.com</td>
+									<td>vintage Village</td>
+									<td>2011/04/25 &nbsp; 12:45PM</td>
+									<td><i class="fa  fa-file-text-o"></i></td>
+								</tr>
+								<tr>
+									<td>11</td>
+									<td>Energy Monitor </td>
+									<td></td>
+									<td>Stoc@mail.com</td>
+									<td>Green Village</td>
+									<td>2011/04/25 &nbsp; 12:45PM</td>
+									<td><i class="fa  fa-file-text-o"></i></td>
+								</tr>
+									
+							</tbody>
+						</table>
+					</div>
+				</div><!--end history tab-->
+			  </div>
+		</div>
+  	</div>	
+	<!---end container-fluid div st-thomas-alerts---->
+    
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+	<!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-ustref" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+    
+  </div>
+</body>
+
+</html>
